@@ -48,6 +48,15 @@
                         </div>
                     </div>
                     <div class="column">
+                        <h3 class="title is-3 has-text-centered">Project</h3>
+                        <hr>
+                        <div class="content">
+                            <ul>
+                                <li><a href="http://esti.mator">ESTI.MATOR</a></li>
+                                <li><a href="http://laposta.devel">LA POSTA</a></li>
+                                <li><a href="http://fantavigliano.devel">fantAvigliano</a></li>
+                            </ul>
+                        </div>
                         <h3 class="title is-3 has-text-centered">Quick Links</h3>
                         <hr>
                         <div class="content">

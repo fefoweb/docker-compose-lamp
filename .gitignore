@@ -1,5 +1,7 @@
 /.env
 /.vscode
+/.idea
+*.conf
 /config/*
 /data/*
 /logs/*
