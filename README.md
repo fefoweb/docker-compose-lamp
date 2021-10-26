@@ -172,3 +172,23 @@ In Production you should modify at a minimum the following subjects:
 
 * php handler: mod_php=> php-fpm
 * secure mysql users with proper source IP limitations
+
+### FEFO WORKSPACE INSTALLATION
+
+1. in www/ put the folder with source code from git or other source
+
+2. Import the DB throught phpMyAdmin or with mysql console
+
+3. modify the db connection with this data
+
+```php
+$this->_DB['host'] = "database:3306";
+$this->_DB['user'] = "root";
+$this->_DB['password'] = $_ENV['MYSQL_ROOT_PASSWORD'];
+$this->_DB['name'] = "<dbname>";
+$this->_DB['type'] = "mysql";
+```
+
+4. Add a vhost configuration for the site in <PATH_TO>/docker-compose-lamp/config/vhosts
+
+5. Enjoy!
