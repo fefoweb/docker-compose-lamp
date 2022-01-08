@@ -55,6 +55,11 @@
                                 <li><a href="http://esti.mator">ESTI.MATOR</a></li>
                                 <li><a href="http://laposta.devel">LA POSTA</a></li>
                                 <li><a href="http://fantavigliano.devel">fantAvigliano</a></li>
+                                <li><a href="http://laposta.devel">La Posta</a></li>
+                                <li><a href="http://umbriaktc.devel">Umbria KTC</a></li>
+                                <li><a href="http://aviglianosalute.devel">Avigliano Salute</a></li>
+                                <li><a href="http://agriturismovarcone.devel">Dimora Todini</a></li>
+                                <li><a href="http://proloco.devel">ProLoco Avigliano Umbro</a></li>
                             </ul>
                         </div>
                         <h3 class="title is-3 has-text-centered">Quick Links</h3>
