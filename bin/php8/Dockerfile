@@ -76,8 +76,8 @@ RUN docker-php-ext-install pdo_mysql && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install gettext && \
     docker-php-ext-install calendar && \
-    docker-php-ext-install exif
-
+    docker-php-ext-install exif && \
+    docker-php-ext-install bcmath
 
 # Install Freetype 
 RUN apt-get -y update && \
@@ -89,7 +89,10 @@ libpng-dev && \
     docker-php-ext-install gd
 
 # Enable apache modules
-RUN a2enmod rewrite headers
+RUN a2enmod rewrite headers ssl deflate filter expires
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+COPY ./config/conf-available/ssl-params.conf /etc/apache2/conf-available/ssl-params.conf
+RUN a2enconf ssl-params

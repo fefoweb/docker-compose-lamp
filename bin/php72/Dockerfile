@@ -47,10 +47,14 @@ RUN docker-php-ext-install -j$(nproc) intl
 
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install gettext
+RUN docker-php-ext-install bcmath
 
 RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ 
 RUN docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
-RUN a2enmod rewrite headers
+RUN a2enmod rewrite headers ssl deflate filter expires
+
+COPY ./config/conf-available/ssl-params.conf /etc/apache2/conf-available/ssl-params.conf
+RUN a2enconf ssl-params
