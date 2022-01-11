@@ -6,3 +6,6 @@
 /logs/*
 /www/**
 .DS_Store
+/config/ssl/*.crt
+/config/ssl/*.key
+/config/ssl/*.pem
