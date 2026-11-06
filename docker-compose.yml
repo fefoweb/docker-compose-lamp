@@ -28,6 +28,7 @@ services:
       - "${HOST_MACHINE_SECURE_HOST_PORT}:443"
     links: 
       - database
+      - mailcatcher
     volumes: 
       - ${DOCUMENT_ROOT-./www}:/var/www/html
       - ${SSL_DIR-./config/ssl}:/etc/apache2/ssl
@@ -75,6 +76,13 @@ services:
     volumes: 
       - /sessions
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+  mailcatcher:
+    container_name: '${COMPOSE_PROJECT_NAME}-${MAIL_CATCHER}'
+    restart: on-failure:10
+    image: dockage/mailcatcher:0.7.1
+    ports:
+      - "1080:1080"
+      - "1025:1025"
   redis:
     container_name: '${COMPOSE_PROJECT_NAME}-redis'
     image: redis:latest

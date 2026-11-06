@@ -56,16 +56,17 @@
                                 <li><a href="http://laposta.devel">LA POSTA</a></li>
                                 <li><a href="http://fantavigliano.devel">fantAvigliano</a></li>
                                 <li><a href="http://laposta.devel">La Posta</a></li>
-                                <li><a href="http://umbriaktc.devel">Umbria KTC</a></li>
                                 <li><a href="http://aviglianosalute.devel">Avigliano Salute</a></li>
                                 <li><a href="http://agriturismovarcone.devel">Dimora Todini</a></li>
                                 <li><a href="http://proloco.devel">ProLoco Avigliano Umbro</a></li>
+                                <li><a href="https://gestsagra.devel">GestSagra</a></li>
                             </ul>
                         </div>
                         <h3 class="title is-3 has-text-centered">Quick Links</h3>
                         <hr>
                         <div class="content">
                             <ul>
+                                <li><a href="http://localhost:1080/">MAIL CATCHER</a></li>
                                 <li><a href="/phpinfo.php">phpinfo()</a></li>
                                 <li><a href="http://localhost:<? print $_ENV['PMA_PORT']; ?>">phpMyAdmin</a></li>
                                 <li><a href="/test_db.php">Test DB Connection with mysqli</a></li>
